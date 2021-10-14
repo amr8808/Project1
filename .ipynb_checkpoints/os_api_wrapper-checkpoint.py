@@ -23,6 +23,7 @@ class openseacollection:
         self.name = [x['name'] for x in self.data['assets']]
         self.last_sale = [x['last_sale'] for x in self.data['assets']]
         self.project_des = self.data['assets'][0]['asset_contract']['description']
-
+        self.collection_name = self.data['assets'][0]['collection']['name']
+        
     def as_df(self): # cast attributes into df
         return pd.DataFrame({'Token ID':self.token_id,'Name':self.name})
