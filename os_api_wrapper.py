@@ -8,7 +8,7 @@
 import requests
 import pandas as pd
 
-class openseacollection:
+class OpenSeaCollection:
     def __init__ (self, url):
         self.url = url   #assign query url to "self.url"
         self.get_data()  #run get_data method
